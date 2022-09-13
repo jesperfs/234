@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void assign(static int* num1)
+{
+	*num1 = 4;
+	return;
+}
+
+int main(void)
+{
+	static int num1 = -3;            // Uppgift A
+	int* ptr1 = &num1;               // Uppgift C
+	assign(&num1);                   // Uppgift D
+	printf("%d\n", num1);            // Uppgift B
+
+	return 0;
+}
